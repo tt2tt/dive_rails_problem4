@@ -25,5 +25,36 @@
   <%= @property.remarks %>
 </p>
 
+<p>
+  <strong>Route_name:</strong>
+  <%= @property.nearst_stations[0].route_name %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @property.nearst_stations[0].name %>
+</p>
+
+<p>
+  <strong>Walking_minutes:</strong>
+  <%= @property.nearst_stations[0].walking_minutes %>
+</p>
+
+<p>
+  <strong>Route_name:</strong>
+  <%= @property.nearst_stations[1].route_name %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @property.nearst_stations[1].name %>
+</p>
+
+<p>
+  <strong>Walking_minutes:</strong>
+  <%= @property.nearst_stations[1].walking_minutes %>
+</p>
+
+
 <%= link_to 'Edit', edit_property_path(@property) %> |
 <%= link_to 'Back', properties_path %>

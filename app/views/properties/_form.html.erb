@@ -11,32 +11,32 @@
     </div>
   <% end %>
 
-  <div class="field">
+
     <%= f.label :name %>
     <%= f.text_field :name %>
-  </div>
 
-  <div class="field">
     <%= f.label :rent %>
-    <%= f.number_field :rent %>
-  </div>
+    <%= f.text_field :rent %>
 
-  <div class="field">
     <%= f.label :address %>
     <%= f.text_field :address %>
-  </div>
 
-  <div class="field">
     <%= f.label :age %>
-    <%= f.number_field :age %>
-  </div>
+    <%= f.text_field :age %>
 
-  <div class="field">
     <%= f.label :remarks %>
     <%= f.text_area :remarks %>
-  </div>
 
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+    <%= f.fields_for :nearst_stations do |station| %>
+      <%= station.label :route_name %>
+      <%= station.text_field :route_name %>
+
+      <%= station.label :name %>
+      <%= station.text_field :name %>
+
+      <%= station.label :walking_minutes %>
+      <%= station.text_field :walking_minutes %>
+    <% end %>
+
+  <%= f.submit %>
 <% end %>
