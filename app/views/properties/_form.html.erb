@@ -28,13 +28,13 @@
     <%= f.text_area :remarks %>
 
     <%= f.fields_for :nearst_stations do |station| %>
-      <%= station.label :route_name %>
+      <%= station.label :路線名 %>
       <%= station.text_field :route_name %>
 
-      <%= station.label :name %>
+      <%= station.label :駅名 %>
       <%= station.text_field :name %>
 
-      <%= station.label :walking_minutes %>
+      <%= station.label :徒歩分数 %>
       <%= station.text_field :walking_minutes %>
     <% end %>
 
