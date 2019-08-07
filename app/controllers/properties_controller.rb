@@ -12,6 +12,7 @@ class PropertiesController < ApplicationController
   def show
     # @stations = NearstStation.where(set_property: @property.id)
     # @stations = Station.where(home_id: set_homes.id).all
+    @stations = NearstStation.where(property_id: set_property.id).all
   end
 
   # GET /properties/new
