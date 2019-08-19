@@ -8,4 +8,3 @@ class Property < ApplicationRecord
   validates :age,  presence: true, length: { maximum: 3 }, numericality: {greater_than: 0}
   validates :remarks,  presence: true, length: { maximum: 200 }
 end
-# accepts_nested_attributes_for
